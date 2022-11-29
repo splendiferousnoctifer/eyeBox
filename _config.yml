@@ -2,26 +2,6 @@ title: eyeBox - DPP Documentation
 description: A starter template for eyeBox
 theme: just-the-docs
 
-url: https://splendiferousnoctifer.github.io/eyeBox
-
-color_scheme: nil
-callouts_level: quiet # or loud
-callouts:
-  highlight:
-    color: yellow
-  important:
-    title: Important
-    color: blue
-  new:
-    title: New
-    color: green
-  note:
-    title: Note
-    color: purple
-  warning:
-    title: Warning
-    color: red
-
 aux_links:
   Repository: https://github.com/splendiferousnoctifer/eyeBox
 
