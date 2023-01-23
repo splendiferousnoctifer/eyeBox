@@ -8,14 +8,14 @@ nav_order: 1
 
 # Implementation
 
-Eventough the steps were implemented in a whatever-came-up and i-have-time-for-this-now order, the iterations describe the design and rough implementation process. 
+Eventough the steps were implemented in a *whatever-comes-up-will-be-dealt-with* and *i-have-time-for-this-now* order, the iterations describe the design and rough implementation process. 
 
 ## Iteration 1
 **Hardware**
 
-While simultaneously working on the face detection running in python the first prototype for the project were designed and built. Initially the entire pipeline should work on an arduino uno as this would have made it possible to incorporate all four servos without a servo driver. It became eveident very quickly that face detection would not run smooth on an arduino uno, thus other options had to be explored.
-![sketch](assets/first_sketch_medium.png)
-While a rasberry pi would also be a viable option, a cross-device solution was chosen. 
+While simultaneously working on the face detection running in python the first prototype for the project were designed and built. Initially the entire pipeline should work on an arduino uno as this would have made it possible to incorporate all four servos without a servo driver. It became eveident very quickly that face detection would not run smooth on an arduino uno, thus other options had to be explored. While a rasberry pi would also be a viable option, a cross-device solution was chosen. 
+
+![sketch](assets/first_sketch_medium.jpeg)
 
 **Facetracking**
 
@@ -35,3 +35,34 @@ Facetracking is more stable and can detect all Faces on a video stream in almost
 **Facetracking**
 
 The update rate was slowed down for sending data to the client. In the same python script a connection to a yet non-existant server was *theoretically* established and the detected face converted to x and y coordinates within the captured image.
+
+**Hardware**
+
+A first *durable* eye-mech was 3D printed and the servos attached as can be seen in the image below. This servo was still controlled by being directly attached to the esp32. The next step was connecting the PCA9865 driver board to the esp. This proved to be quite delicate as a correct assembly with resistors for the I2C connection was imperative. Once the PCA was connected, the next issue was testing out the correct frequencies and pulselengths in order to move the servos.
+
+![assembly](assets/eyeBox_assembly_cut.png)
+![setup](assets/setup_pca.png)
+
+## Iteration 4 - *almost final*
+Setting up and establishing a server connection between python on the PC and the esp32 was rather straightforward, what proved to be a nuisance was the data transmission. As the data was sent as an byte-encoded struct package from python, but C++ lacked the respective library, an intricat method with a self declared structure datatype had to be setup. With this obstacle out of the way, testing of the finally 3D printed and assembled eye-mech began. The face detection was done on a Mac with the built-in webcam. This information is important for later.
+
+![eyeMech test](assets/eyeBox_test_AdobeExpress.gif)
+
+The eyes were printed, painted, coated and mounted on the eye-mech.
+
+
+{: .note-title }
+Note from the author:
+
+The eye-mech had been looking rather soulless so far. It goes without saying that the addition of eyes added not much soul either. The desired effect of eyes gazing at you and making you uncomfortable was reached, success.
+
+Additionally an encasing box was designed and lasercut out of plywood sheets. The box was glued together and the eyes and electronics installed. As far as the implementation was concerned, it would have been finished... 
+
+![box](assets/eyeBox_boxBuild_medium.jpeg)
+![box_back](assets/eyeBox_back_medium.jpeg)
+
+
+## Final Iteration
+
+
+
