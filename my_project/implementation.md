@@ -11,7 +11,11 @@ nav_order: 1
 Eventough the steps were implemented in a *whatever-comes-up-will-be-dealt-with* and *i-have-time-for-this-now* order, the iterations describe the design and rough implementation process. 
 
 ## Table of Contents
-- [Iteration 1](#iteration-1)
+- [Iteration 1](#iteration-1) - First tries
+- [Iteration 2](#iteration-2) - Going remote
+- [Iteration 3](#iteration-3) - Eyes, Assemble!
+- [Iteration 4](#iteration-4---almost-final) - Final?
+- [Final Iteration](#final-iteration) - Final!
 
 ## Iteration 1
 **Hardware**
