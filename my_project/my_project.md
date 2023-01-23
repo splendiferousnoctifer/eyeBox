@@ -1,11 +1,16 @@
 ---
 title: eyeBox
 layout: home
+has_children: true
 ---
 
 # eyeBox
+{: .no_toc }
 
 Project documentation for the **Design for Physical Prototyping** course 2022/23 focusing on the topic of **Uncomfortable Devices**.
+
+{:toc}
+
 
 ## Abstract
 
@@ -17,26 +22,15 @@ This uncomfortable device is a *unique device* that aims to help individuals red
 
 It can be unpleasant due to its constant observation while eating, its twitching eyes or the noise it makes simply by existing. While it may provide solace for those seeking not to dine alone, it may very well be obnoxious for everyone else.
 
+_todo_
 ![Chopsticks](assets/chopsticks.jpg)
 
 ## Implementation
 
 Decribed in simple terms, the project follows a pipeline in order to move the eyes. It is implemented using two code files, one written in C++ for the ESP32 and the other in Python for the PC. The C++ code runs on the ESP32 and sets up a WiFi server to receive data from the Python code. The Python code captures a webcam stream, uses OpenCV to detect a face, and sends the coordinates of the face to the ESP32 server. The ESP32 code receives the coordinates, maps them to the correct rotation for the servo motors, and then controls the servo motors to move the eyes to look in the direction of the face.
 
-In addition to the face tracking functionality, we also had the idea to add a cleaning function to the machine. The plan was to have a drawer at the bottom of the machine that would pull out a plate for the user to eat on, and once the user was finished, the plate would be pulled back into the machine for cleaning as the linear motion from moving backwards would be translated into rotary motion, spinning the plate. The bits left on the plate would then be pushed out of the machine. Sponges mounted on top of the drawer opening would clean the spinning plate. However, due to technical difficulties with the motor, power supply and gear transimission this functionality was not fully realized. Instead he plate can be pushed and pulled manually via the back of the box.
-
-
-### Iteration A
-
-Lorem ipsum dolor sit amet.
-
-### Iteration B
-
-Lorem ipsum dolor sit amet.
-
-### Iteration C
-
-Lorem ipsum dolor sit amet.
+Code snippets and implementation steps can be found in their respective chapters on the subpages Code and Implementation.
+[An Internal Link](/test.md)
 
 ## Materials and tools
 
@@ -75,6 +69,8 @@ Materials and hardwate are listed below. The entire project was built from scrat
 During the development of the project, several problems that needed to be solved were  encountered. One of the main issues was controlling the servo motors. To find the correct oscillating frequency for the motors proved to be quite difficult and this in turn resulted in the servos not moving correctly. This problem required a significant amount of trial and error to solve, and it took a considerable amount of time to get the servos moving as desired.
 
 Another problem was sending data from the Python code to the ESP32 over a server. The python script converts the integer array of coordinates into byte representation and sends it, but the ESP32 running with c++ receives the data differently, albeit still in byte representation. This required function to convert the byte representation back to the original integer array. This problem added an additional layer of complexity to the project and required a significant amount of debugging to solve.
+
+In addition to the face tracking functionality, we also had the idea to add a cleaning function to the machine. The plan was to have a drawer at the bottom of the machine that would pull out a plate for the user to eat on, and once the user was finished, the plate would be pulled back into the machine for cleaning as the linear motion from moving backwards would be translated into rotary motion, spinning the plate. The bits left on the plate would then be pushed out of the machine. Sponges mounted on top of the drawer opening would clean the spinning plate. However, due to technical difficulties with the motor, power supply and gear transimission this functionality was not fully realized. Instead he plate can be pushed and pulled manually via the back of the box.
 
 ## Conclusion
 Our project demonstrates the potential of using computer vision, microcontroller, and servo motors to create interactive and fun applications. The project uses the OpenCV library to detect a face in a webcam stream and extract the coordinates of the face. The coordinates are then converted into the appropriate rotation for the servo motors and controls the movement of the eyes, creating the illusion that the eyes are following the person in front of the webcam. This project shows that with simple tools, some debugging and modelling, electric skills, a high frustration levels and a lot of time it is possible to create uncomfortably interactive and unnervingly fun projects using open-source libraries and off-the-shelf hardware.
