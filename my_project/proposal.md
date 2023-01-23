@@ -1,7 +1,7 @@
 ---
 title: Code
 layout: default
-parent: my_project
+parent: eyeBox
 nav_order: 1
 ---
 
