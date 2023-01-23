@@ -51,11 +51,11 @@ A first *durable* eye-mech was 3D printed and the servos attached as can be seen
 ![setup](assets/setup_pca.png)
 
 ## Iteration 4 - *almost final*
-Setting up and establishing a server connection between python on the PC and the esp32 was rather straightforward, what proved to be a nuisance was the data transmission. As the data was sent as an byte-encoded struct package from python, but C++ lacked the respective library, an intricat method with a self declared structure datatype had to be setup. With this obstacle out of the way, testing of the finally 3D printed and assembled eye-mech began. The face detection was done on a Mac with the built-in webcam. This information is important for later.
+Setting up and establishing a server connection between python on the PC and the esp32 was rather straightforward, what proved to be a nuisance was the data transmission. As the data was sent as an byte-encoded struct package from python, but C++ lacked the respective library, an intricat method with a self declared structure datatype had to be setup. With this obstacle out of the way, testing of the finally 3D printed and assembled eye-mech began. The face detection was done on a Mac with the built-in webcam.
 
 ![eyeMech test](assets/eyeBox_test_AdobeExpress.gif)
 
-The eyes were printed, painted, coated and mounted on the eye-mech. The eye-mech had been looking rather soulless so far. It goes without saying that the addition of eyes added not much soul either. The desired effect of eyes gazing at you and making you uncomfortable was reached, success. Additionally an encasing box was designed and lasercut out of plywood sheets. The box was glued together and the eyes and electronics installed. As far as the implementation was concerned, it would have been finished... 
+The eyes were printed, painted, coated and mounted on the eye-mech. The eye-mech had been looking rather soulless so far. It goes without saying that the addition of eyes added not much soul either. The desired effect of eyes gazing at you and making you uncomfortable was reached, success. Additionally an encasing box was designed and lasercut out of plywood sheets. The box was glued together and the eyes and electronics installed.
 
 ![box](assets/eyeBox_boxBuild_medium.jpeg)
 ![box_back](assets/eyeBox_back_medium.jpeg)
