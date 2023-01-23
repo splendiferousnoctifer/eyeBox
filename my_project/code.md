@@ -55,7 +55,7 @@ PORT_NUMBER = 80
 IP_ADDRESS = 'INSERT-IP_ADRESS'
 
 # Load the cascade classifier
-face_cascade = cv2.CascadeClassifier('/Users/samzuehlke/Downloads/haarcascade_frontalface_default.xml')
+face_cascade = cv2.CascadeClassifier('/PATH_TO/haarcascade_frontalface_default.xml')
 
 # Open the webcam
 cap = cv2.VideoCapture(0)
@@ -183,20 +183,15 @@ void loop() {
         client.stop();
     }
     blinkCycle();
-    recvOneChar();
-    showNewData();
-
-    hor = map(turnTo, 0,180, SERVOMIN, SERVOMAX);
-
-    pwm.setPWM(0, 0, hor);
-    pwm.setPWM(1, 0, vert);
 }
 
+// data type for converting byte to in array
 union byteToInt {
     byte array[4];
     int val;
 };
 
+//reads from client and converts to int
 std::vector<int> parseArray(WiFiClient client) {
     std::vector<int> array = {0, 0, 0, 0};
     
@@ -226,13 +221,12 @@ std::vector<int> parseArray(WiFiClient client) {
     return array;
 }
 
-
+//takes face coordinate sand maps it to an appropriate servo rotation
+// still needs some fine tuning and adjustments for camera angle and fov
 std::vector<int> mapToServoRotation(int y, int x, int w, int h) {
     std::vector<int> servo_rotations = {0, 0};
     float x_ratio = (float)y / (float)w;
     float y_ratio = (float)x / (float)h;
-
-    
 
     servo_rotations[0] = (int)map(x,0,h,108,54);
     servo_rotations[1] = (int)map(y,0,w,90,0);
@@ -244,7 +238,7 @@ std::vector<int> mapToServoRotation(int y, int x, int w, int h) {
     return servo_rotations;
 }
 
-
+//blinks every 5 seconds
 void blinkCycle() {
     static unsigned long previousMillis = 0;
     unsigned long currentMillis = millis();
@@ -268,7 +262,5 @@ void blinkCycle() {
         Serial.println("Blink");
         previousMillis = currentMillis;
     }
-}
-
 }
 ```
