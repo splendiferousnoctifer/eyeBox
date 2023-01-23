@@ -1,18 +1,12 @@
 ---
-title: Project Proposal
+title: Code
 layout: default
-parent: my_prject
+parent: my_project
 nav_order: 1
 ---
 
-# Project proposal
+# Code description
 
 The inital project concept.
 
-## Time plan
-
-| Description | Due date |
-| ----------- | -------- |
-|             |          |
-|             |          |
-|             |          |
+## Code segments
