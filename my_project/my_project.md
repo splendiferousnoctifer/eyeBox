@@ -55,8 +55,6 @@ Materials and hardwate are listed below. The entire project was built from scrat
 - Adafruit_PWMServoDriver library
 - Wi-Fi connection (supplied by a mobile hotspot from a Phone)
 
-![eyeBox_back](assets/eyeBox_back_small.jpg)
-
 ## Problems
 During the development of the project, several problems that needed to be solved were  encountered. One of the main issues was controlling the servo motors. To find the correct oscillating frequency for the motors proved to be quite difficult and this in turn resulted in the servos not moving correctly. This problem required a significant amount of trial and error to solve, and it took a considerable amount of time to get the servos moving as desired.
 
