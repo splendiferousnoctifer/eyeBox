@@ -5,8 +5,10 @@ parent: eyeBox
 nav_order: 1
 ---
 
-# Code description
+# Implementation
 
-The inital project concept.
+Eventough the steps were implemented in a whatever-came-up and i-have-time-for-this-now order, the iterations describe the design and rough implementation process. 
 
-## Code segments
+## Iteration 1
+
+
