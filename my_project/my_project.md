@@ -12,6 +12,7 @@ Project documentation for the **Design for Physical Prototyping** course 2022/23
 EyeBox was created as part of a lecture on uncomfortable interactions. The goal of the project was to design a machine that would be uncomfortable to interact with, and we settled on the idea of an "eating companion" that would watch the user while they eat. The idea behind this concept is that it can be uncomfortable to be watched while eating, and the machine would serve to amplify this discomfort. The project aims to create a real-time face tracking system using a webcam and servo motors. The system is able to detect a face in the webcam stream, extract the coordinates of the face, and send those coordinates to a microcontroller (ESP32) which converts them into the appropriate rotation for the servos. The servos are then able to move the eyes to look in the direction of the face, creating the illusion that the eyes are following the person in front of the webcam.
 
 ## Concept
+![dallesketch](assets/first_idea.png)
 
 This uncomfortable device is a *unique device* that aims to help individuals reduce food waste by providing an extrinsic motivation to finish their meals. It works by laying its gaze upon the user and thus watching them as they eat, judging each bite they take or don't take. The device will continue to watch the user until they have finished their meal, or until the machine sees fit. Once the user has finished eating or the machine has had enough, it will attempt to clean the plate and push any remaining food off of it. A successful outcome would be a clean plate and a *slight* feeling of discomfort, while an unsuccessful outcome would be no interaction with the user and a failed attempt at cleaning the plate. The device can be used with every meal, and is considered successful if the user finishes their plate. However, if the user neglects their plate and does not finish a meal due to a lack of *pressure or motivation* from the machine, it would be considered an unsuccessful outcome. The device may malfunction if it detects wrongful movements or the eyes and is not able to remove the plate and clean it.
 
@@ -54,7 +55,7 @@ Materials and hardwate are listed below. The entire project was built from scrat
 - Adafruit_PWMServoDriver library
 - Wi-Fi connection (supplied by a mobile hotspot from a Phone)
 
-![eyeBox_back](assets/eyeBox_back.jpg)
+![eyeBox_back](assets/eyeBox_back_small.jpg)
 
 ## Problems
 During the development of the project, several problems that needed to be solved were  encountered. One of the main issues was controlling the servo motors. To find the correct oscillating frequency for the motors proved to be quite difficult and this in turn resulted in the servos not moving correctly. This problem required a significant amount of trial and error to solve, and it took a considerable amount of time to get the servos moving as desired.
