@@ -24,8 +24,7 @@ _todo_
 
 Decribed in simple terms, the project follows a pipeline in order to move the eyes. It is implemented using two code files, one written in C++ for the ESP32 and the other in Python for the PC. The C++ code runs on the ESP32 and sets up a WiFi server to receive data from the Python code. The Python code captures a webcam stream, uses OpenCV to detect a face, and sends the coordinates of the face to the ESP32 server. The ESP32 code receives the coordinates, maps them to the correct rotation for the servo motors, and then controls the servo motors to move the eyes to look in the direction of the face.
 
-Code snippets and implementation steps can be found in their respective chapters on the subpages Code and Implementation.
-[An Internal Link](/eyeBox/my_project/test)
+Code snippets and implementation steps can be found in their respective chapters on the subpages Code and [Implementation](/eyeBox/my_project/implementation.md).
 
 ## Materials and tools
 
