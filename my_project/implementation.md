@@ -62,6 +62,10 @@ Additionally an encasing box was designed and lasercut out of plywood sheets. Th
 
 
 ## Final Iteration
+For the presentation one aspect was changed which in turn set a waterfal of problems in motion. So far only the built in webcam was tested, for the presentation an external camera was used. Reading the data was no issue at all, the only problem occuring was that the raw image coordinates were flipped. Thus the mapping was calculating negative rotations which the servos could not handle. Troubleshooting and debugging this took quite some time. In the end, it worked out and visitors could appreciate **and** hate the eyeBox.
 
+![final](assets/eyeBox_final_AdobeExpress.gif)
+![setup](assets/eyeBox_setup.jpg)
+![todo](assets/todo)
 
 
