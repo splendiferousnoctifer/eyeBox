@@ -51,10 +51,9 @@ Setting up and establishing a server connection between python on the PC and the
 The eyes were printed, painted, coated and mounted on the eye-mech.
 
 
-{: .note-title }
-Note from the author:
-
+{: .highlight }
 The eye-mech had been looking rather soulless so far. It goes without saying that the addition of eyes added not much soul either. The desired effect of eyes gazing at you and making you uncomfortable was reached, success.
+
 
 Additionally an encasing box was designed and lasercut out of plywood sheets. The box was glued together and the eyes and electronics installed. As far as the implementation was concerned, it would have been finished... 
 
