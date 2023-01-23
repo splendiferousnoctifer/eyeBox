@@ -7,13 +7,14 @@ nav_order: 1
 
 # Code description
 **ESP32 Feather - C++**
+
 The C++ code file runs on the ESP32 microcontroller and sets up a WiFi server to receive data from the Python code. The following is a summary of the main parts of the code:
 1. The code starts by including several libraries, including the "Wire.h" library for I2C communication, the "WiFi.h" library for connecting to a WiFi network, the "Adafruit_PWMServoDriver.h" library for controlling servo motors with a PWM driver, and the "vector" library for storing data in arrays.
-2. The code then defines some constants such as SERVOMIN, SERVOMAX and SERVO_FREQ. These constants are used to set the minimum and maximum rotation for the servo motors and the PWM frequency.
+2. The code then defines some constants such as  `SERVOMIN`, `SERVOMAX` and `SERVO_FREQ`. These constants are used to set the minimum and maximum rotation for the servo motors and the PWM frequency.
 3. The code then declares several functions:
-  - mapToServoRotation: This function maps the coordinates of the face to the appropriate rotation for the servo motors.
-  - parseArray: This function parses the data received from the Python code and converts it into an array of integers.
-  - blinkCycle, recvOneChar and showNewData: These functions are not described in the code, it could be used for debugging, or specific functionality.
+  - `mapToServoRotation`: This function maps the coordinates of the face to the appropriate rotation for the servo motors.
+  - `parseArray`: This function parses the data received from the Python code and converts it into an array of integers.
+  - `blinkCycle`: every 5 seconds blinkCycle triggers a blinking of the eye by setting the eyelids from open to close to open with the servos
 4. In the `setup()` function:
   - it starts the serial communication at 115200 baud rate.
   - it connects to the WiFi network by providing the SSID and password.
@@ -22,10 +23,11 @@ The C++ code file runs on the ESP32 microcontroller and sets up a WiFi server to
 5. In the `loop()` function:
   - it checks for available clients and if a client is connected
   - it receives the data from the client, maps it to the servo rotations, sets the PWM values for the servo motors.
-  - it calls the blinkCycle, recvOneChar and showNewData functions.
+  - it calls the `blinkCycle`.
 6. It also has a union byteToInt which is used to convert the binary data received from the client to int values.
 
 **Python on PC**
+
 The Python code file captures a webcam stream, uses OpenCV to detect a face, and sends the coordinates of the face to the ESP32 server. The following is a summary of the main parts of the code:
 1. The code starts by importing several libraries, including `cv2 for OpenCV`, socket for network communication and struct for binary data.
 2. The code then defines some constants such as `PORT_NUMBER` and `IP_ADDRESS`. These constants are used to set the port number and IP address for the server on the ESP32.
