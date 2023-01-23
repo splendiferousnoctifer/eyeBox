@@ -17,14 +17,11 @@ This uncomfortable device is a *unique device* that aims to help individuals red
 
 It can be unpleasant due to its constant observation while eating, its twitching eyes or the noise it makes simply by existing. While it may provide solace for those seeking not to dine alone, it may very well be obnoxious for everyone else.
 
-_todo_
-![Chopsticks](assets/chopsticks.jpg)
-
 ## Implementation
 
 Decribed in simple terms, the project follows a pipeline in order to move the eyes. It is implemented using two code files, one written in C++ for the ESP32 and the other in Python for the PC. The C++ code runs on the ESP32 and sets up a WiFi server to receive data from the Python code. The Python code captures a webcam stream, uses OpenCV to detect a face, and sends the coordinates of the face to the ESP32 server. The ESP32 code receives the coordinates, maps them to the correct rotation for the servo motors, and then controls the servo motors to move the eyes to look in the direction of the face.
 
-Code snippets and implementation steps can be found in their respective chapters on the subpages Code and [Implementation](/eyeBox/my_project/implementation.md).
+Code snippets and implementation steps can be found in their respective chapters on the subpages [Code](/eyeBox/my_project/code) and [Implementation](/eyeBox/my_project/implementation).
 
 ## Materials and tools
 
@@ -57,7 +54,7 @@ Materials and hardwate are listed below. The entire project was built from scrat
 - Adafruit_PWMServoDriver library
 - Wi-Fi connection (supplied by a mobile hotspot from a Phone)
 
-![Application](assets/simone.gif)
+![eyeBox_back](assets/eyeBox_back.jpg)
 
 ## Problems
 During the development of the project, several problems that needed to be solved were  encountered. One of the main issues was controlling the servo motors. To find the correct oscillating frequency for the motors proved to be quite difficult and this in turn resulted in the servos not moving correctly. This problem required a significant amount of trial and error to solve, and it took a considerable amount of time to get the servos moving as desired.
