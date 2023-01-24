@@ -62,7 +62,11 @@ Another problem was sending data from the Python code to the ESP32 over a server
 
 In addition to the face tracking functionality, we also had the idea to add a cleaning function to the machine. The plan was to have a drawer at the bottom of the machine that would pull out a plate for the user to eat on, and once the user was finished, the plate would be pulled back into the machine for cleaning as the linear motion from moving backwards would be translated into rotary motion, spinning the plate. The bits left on the plate would then be pushed out of the machine. Sponges mounted on top of the drawer opening would clean the spinning plate. However, due to technical difficulties with the motor, power supply and gear transimission this functionality was not fully realized. Instead he plate can be pushed and pulled manually via the back of the box.
 
+![eye_watcher](assets/watching_eye.png)
+
 ## Conclusion
 Our project demonstrates the potential of using computer vision, microcontroller, and servo motors to create interactive and fun applications. The project uses the OpenCV library to detect a face in a webcam stream and extract the coordinates of the face. The coordinates are then converted into the appropriate rotation for the servo motors and controls the movement of the eyes, creating the illusion that the eyes are following the person in front of the webcam. This project shows that with simple tools, some debugging and modelling, electric skills, a high frustration levels and a lot of time it is possible to create uncomfortably interactive and unnervingly fun projects using open-source libraries and off-the-shelf hardware.
 
 Overall, the project required a lot of troubleshooting and problem-solving in order to get the final working prototype. However, the team was able to overcome these difficulties and successfully implement the real-time face tracking functionality
+
+*Addendum: also called iBox, eyeBox, iMech or eyeMech*
