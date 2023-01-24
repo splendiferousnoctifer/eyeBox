@@ -66,6 +66,3 @@ For the presentation one aspect was changed which in turn set a waterfal of prob
 
 ![final](assets/eyeBox_final_AdobeExpress.gif)
 ![setup](assets/eyeBox_setup.jpg)
-![todo](assets/todo)
-
-
